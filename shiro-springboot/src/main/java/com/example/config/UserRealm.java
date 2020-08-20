@@ -25,7 +25,7 @@ public class UserRealm extends AuthorizingRealm {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         //info.addStringPermission("user:add");
 
-        //拿到当前登录的这个对象
+        //拿到当前登录的这个对象  是通过下面的doget方法传过来的
         Subject subject = SecurityUtils.getSubject();
         User currentUser = (User) subject.getPrincipal();
 
